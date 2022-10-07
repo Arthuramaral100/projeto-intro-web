@@ -1,25 +1,37 @@
-let serie1 = {nome :"The Office", 
-sinopse: "Esta versão americana de \"The Office\" é uma comédia que gira em torno do cotidiano de um escritório. Esta sátira descreve a vida dos funcionários da fábrica de papel Dunder Miffin, situada em Scranton, na Pensilvânia.", 
-temps: 9, 
-episodios: 201, 
-temNetflix: false, 
-elenco: ["Steve Carrell", "Rainn Wilson", "John Krasinski", "Jenna Fischer", "B. J. Novak", "Angela Kinsey", "Brian Baumgartner", "Oscar Nunez", "Leslie David Baker", "Creed Bratton", "Phyllis Smith", "MIndy Kaling", "Kate Flannery", "Paul Lieberstein", "Craig Robinson", "Ed Helms", "Ellie Kemper"]
+let serie1 = {
+    nome :"The Office", 
+    sinopse: "Esta versão americana de \"The Office\" é uma comédia que gira em torno do cotidiano de um escritório. Esta sátira descreve a vida dos funcionários da fábrica de papel Dunder Miffin, situada em Scranton, na Pensilvânia.", 
+    temps: 9, 
+    episodios: 201, 
+    temNetflix: false, 
+    elenco: ["Steve Carrell", "Rainn Wilson", "John Krasinski", "Jenna Fischer", "B. J. Novak", "Angela Kinsey", "Brian Baumgartner", "Oscar Nunez", "Leslie David Baker", "Creed Bratton", "Phyllis Smith", "MIndy Kaling", "Kate Flannery", "Paul Lieberstein", "Craig Robinson", "Ed Helms", "Ellie Kemper"]
 }
 
-let serie2 = {nome: "Brooklyn 99", 
-sinopse: "A série gira em torno de Jake Peralta (Andy Samberg), um imaturo, mas talentoso, detetive da polícia de Nova York na fictícia 99. ª Delegacia do Brooklyn, que muitas vezes entra em conflito com seu novo comandante, o sério e severo capitão Raymond Holt (Andre Braugher).", 
-temps: 8, 
-episodios: 153, 
-temNetflix: true, 
-elenco: ["Andy Samberg", "Melissa Fumero", "Stephanie Beatriz", "Chelsea Peretti", "Terry Crews", "Andre Braugher", "Joe Lo Truglio", "Dirk Blocker", "Joel McKinnon Miller", "Marc Evan Jackson", "Jason Mantzoukas", "Craig Robinson"]
+let serie2 = {
+    nome: "Brooklyn 99", 
+    sinopse: "A série gira em torno de Jake Peralta (Andy Samberg), um imaturo, mas talentoso, detetive da polícia de Nova York na fictícia 99. ª Delegacia do Brooklyn, que muitas vezes entra em conflito com seu novo comandante, o sério e severo capitão Raymond Holt (Andre Braugher).", 
+    temps: 8, 
+    episodios: 153, 
+    temNetflix: true, 
+    elenco: ["Andy Samberg", "Melissa Fumero", "Stephanie Beatriz", "Chelsea Peretti", "Terry Crews", "Andre Braugher", "Joe Lo Truglio", "Dirk Blocker", "Joel McKinnon Miller", "Marc Evan Jackson", "Jason Mantzoukas", "Craig Robinson"]
 }
 
-let serie3 = {nome: "The Crown", 
-sinopse: "The Crown é uma série de TV britânica produzida para a Netflix. A história acompanha a rainha Elizabeth II e os primeiros-ministros que, juntos, deram forma à Grã-Bretanha depois da Segunda Guerra Mundial.", 
-temps: 4,
-episodios: 40, 
-temNetflix: true, 
-elenco: ["Claire Foy", "Olivia Colman", "Matt Smith", "Tobias Menzies", "Vanessa Kirby", "Helena Bonham Carter", "Eilen Atkins", "Victoria Hamilton", "Pip Torrens", "John Lithgow", "Ben Miles"]
+let serie3 = {
+    nome: "The Crown", 
+    sinopse: "The Crown é uma série de TV britânica produzida para a Netflix. A história acompanha a rainha Elizabeth II e os primeiros-ministros que, juntos, deram forma à Grã-Bretanha depois da Segunda Guerra Mundial.", 
+    temps: 4,
+    episodios: 40, 
+    temNetflix: true, 
+    elenco: ["Claire Foy", "Olivia Colman", "Matt Smith", "Tobias Menzies", "Vanessa Kirby", "Helena Bonham Carter", "Eilen Atkins", "Victoria Hamilton", "Pip Torrens", "John Lithgow", "Ben Miles"]
+}
+
+let serie4 = {
+    nome: "Stranger Things",
+    sinopse: "Um grupo de amigos se envolve em uma série de eventos sobrenaturais na pacata cidade de Hawkins. Eles enfrentam criaturas monstruosas, agências secretas do governo e se aventuram em dimensões paralelas.",
+    temps: 4,
+    episodios: 34, 
+    temNetflix: true,
+    elenco: ["Millie Bobby Brown", "Finn Wolfhard", "Noah Schnapp", "Caleb McLaughlin", "Sadie Sink", "Gaten Matarazzo", "Joe Keery", "David Harbour", "Natalia Dyer", "Winona Ryder", "Charlie Heaton", "Maya Hawke", "Dacre Montgomery", "Matthew Modine", "Joseph Quinn", "Jamie Campbell Bower", "Priah Ferguson", "Brett Gelman", "Paul Reiser", "Cara Buono", "Eduardo Franco", "Tom Wlaschiha", "Gabriella Pizzolo"]
 }
 
 // Criar um array vazio e verificar se o booleano de cada objeto é true para poder adicionar ao array vazio 
@@ -35,11 +47,12 @@ function verificaNetflix(serie) {
 verificaNetflix(serie1)
 verificaNetflix(serie2)
 verificaNetflix(serie3)
+verificaNetflix(serie4)
 
 // Tirando média do número de episodios das 3 séries
 
-const numEpisodios = (serie1.episodios + serie2.episodios + serie3.episodios) / 3
-//console.log(`Média de episódios das 3 séries: ${numEpisodios.toFixed(0)}`);
+const numEpisodios = (serie1.episodios + serie2.episodios + serie3.episodios + serie4.episodios) / 4
+//console.log(`Média de episódios das 4 séries: ${numEpisodios.toFixed(0)}`);
 
 // Tirando média de episódios por temporada de cada série
 
@@ -49,16 +62,19 @@ function mediaTemp(serie){
 mediaTemp(serie1)
 mediaTemp(serie2)
 mediaTemp(serie3)
+mediaTemp(serie4)
 
 // Alterando o nome ds séries para maiúsculo
 
 serie1.nome = serie1.nome.toUpperCase()
 serie2.nome = serie2.nome.toUpperCase()
 serie3.nome = serie3.nome.toUpperCase()
+serie4.nome = serie4.nome.toUpperCase()
+
 
 // Alterando o array "elenco" para uma string em todas as series
 
-let novoArray = [serie1, serie2, serie3]
+let novoArray = [serie1, serie2, serie3, serie4]
 // for(let ator of novoArray){
 //      ator.elenco = ator.elenco.toString()
 // }
