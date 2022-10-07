@@ -3,46 +3,85 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-    height: 10vh;
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
 }
+/* ------------------------------------------------------------------------------------------ */
+header{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-row: 1;
+    background-color: black;
+    color: white;
+}
+/* ------------------------------------------------------------------------------------------ */
+main{
+    padding-bottom: 10px;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(25, 25, 25);
+}
+/* ------------------------------------------------------------------------------------------ */
 .botao{
     display: flex;
-    justify-content: center;
-    padding: 5vh;
 }
-main{
-    background-color: rgb(25, 24, 24);
+#busca-serie{
+    display: flex;
+    font-size: x-large;
+    width: 330px;
+    height: 5vh;
+    background-color: black;
+    border: solid black 1px;
+    border-radius: 8px 0px 0px 8px ;
     color: white;
 }
-.series{
+#botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background-color: black;
+    height: 5vh;
+    border: solid black 1px;
+    border-radius: 0px 8px 8px 0px;
+}
+/* ------------------------------------------------------------------------------------------ */
+.catalogo{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    align-items: baseline;
+}
+.serie{
+    padding: 2vh 0;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5vh;
-}
-.serie1{
+    justify-items: center;
+    width: 360px;
+    border-radius: 15px 0px 15px 0 ;
     background-color: black;
-    border: solid white 1px;
+    color: white;
 }
-.serie2{
-    background-color: black;
-    border: solid white 1px;
-}
-.serie3{
-    background-color: black;
-    border: solid white 1px;
+.color-link{
+    color: white;
 }
 ul {
+    padding: 0 1vw;
     list-style-type: none;
 }
+/* ------------------------------------------------------------------------------------------ */
 footer{
-    background-color: black;
     color: white;
-    height: 8vh;
+    grid-row: 3;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
