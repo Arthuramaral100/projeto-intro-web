@@ -6,40 +6,83 @@
 .container{
     height: 100vh;
     display: grid;
-    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-rows: 12vh 1fr 12vh;
 }
+@font-face{
+    font-family: 'Bebas Neue' ;
+    src: url("./imagens/bebas_neue/BebasNeue-Regular.otf") format("opentype");
+}
+@font-face{
+    font-family: 'gotham';
+    src: url('./imagens/gothamic/Gothamic.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Louis';
+    src: url('./imagens/louis_george_caf/Louis\ George\ Cafe.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Raleway';
+    src: url('./imagens/Raleway/Raleway-VariableFont_wght.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'stranger';
+    src: url('./imagens/Benguiat\ Bold.ttf') format('opentype');
+}
+
 /* ------------------------------------------------------------------------------------------ */
 header{
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
     grid-row: 1;
-    background-color: black;
+    background: black;
     color: white;
+    font-family: 'gotham';
+    /* font-size: xx-large; */
+}
+
+.nome-pagina{
+    font-size: 50px;
 }
 /* ------------------------------------------------------------------------------------------ */
-main{
-    padding-bottom: 10px;
-    grid-row: 2;
-    display: grid;
-    grid-template-rows: 10vh 1fr;
+
+.foto-perfil{
+    border-radius: 100%;
+}
+.foto-perfil:hover{
+    width: 68px;
+    height: 68px;
+}
+/* ------------------------------------------------------------------------------------------ */
+
+.pesquisa-perfil{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vh;
     align-items: center;
-    justify-items: center;
-    background-color: rgb(25, 25, 25);
 }
 /* ------------------------------------------------------------------------------------------ */
-.botao{
+.barra-de-pesquisa{
     display: flex;
+    border: solid 1px gray;
+    border-radius: 8.5px ;
+    height: 5.5vh;
+    align-items: center;
 }
-#busca-serie{
+#input{
     display: flex;
-    font-size: x-large;
-    width: 330px;
+    font-size: larger;
+    width: 30vw;
     height: 5vh;
     background-color: black;
     border: solid black 1px;
     border-radius: 8px 0px 0px 8px ;
     color: white;
+    font-family: Louis
 }
 #botao{
     display: flex;
@@ -51,37 +94,169 @@ main{
     border: solid black 1px;
     border-radius: 0px 8px 8px 0px;
 }
+
+/* ------------------------------------------------------------------------------------------ */
+main{
+    padding: 0 0 10px 0;
+    grid-row: 2;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    background-color: rgb(25, 25, 25);
+    font-family: Louis;
+    gap: 1vh;
+
+}
+/* ------------------------------------------------------------------------------------------ */
+#serie-nao-encontrada{
+    display: none;
+    color: white;
+    font-size: xx-large
+}
+/* ------------------------------------------------------------------------------------------ */
+
+nav{
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+}
+#netflix:hover{
+    color: red;
+    font-size: larger;
+}
+#amazon:hover{
+    color: rgb(4, 4, 199);
+    font-size: larger;
+}
+#hbo:hover{
+    color: blueviolet;
+    font-size: larger;
+}
+#disney:hover{
+    color: rgb(137, 137, 251);
+    font-size: larger;
+}
+#globo:hover{
+    color: orangered;
+    font-size: larger;
+}
+#apple:hover{
+    color: gainsboro;
+    font-size: larger;
+}
 /* ------------------------------------------------------------------------------------------ */
 .catalogo{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1vw;
     align-items: baseline;
 }
 .serie{
     padding: 2vh 0;
-    display: grid;
-    justify-items: center;
-    width: 360px;
-    border-radius: 15px 0px 15px 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 480px;
+    height: 895px;
+    gap: 1vh;
+    border-radius: 15px ;
     background-color: black;
     color: white;
 }
 .color-link{
     color: white;
 }
-ul {
+ul{
     padding: 0 1vw;
     list-style-type: none;
 }
+li{
+    padding-bottom: 1vh;
+}
+
+.nome-serie3{
+    font-family: Raleway;
+}
+.nome-serie4{
+    font-family: stranger;
+}
+
 /* ------------------------------------------------------------------------------------------ */
 footer{
     color: white;
     grid-row: 3;
     background-color: black;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: Louis
 }
+
+/* ------------------------------------------------------------------------------------------ */
+@media screen and (max-device-width: 1475px){
+    .catalogo{
+        justify-content: center;
+    }
+} 
+/* ------------------------------------------------------------------------------------------ */
+
+@media screen and (max-device-width: 727px) {
+    .container{
+        grid-template-rows: 18vh 1fr 12vh;
+    }
+    .nome-pagina{
+        font-size: 50px;
+    }
+    #input{
+        width: 90%;
+    }
+    .barra-de-pesquisa{
+        width: 50vw;
+        height: 5vh;
+    }
+    .pesquisa-perfil{
+        width: 90%;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 0.7vh;
+        height: 9vh;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3vh;
+    }
+    .serie{
+    padding: 2vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    height: 860px;
+    border-radius: 15px ;
+    background-color: black;
+    color: white;
+    }
+    .midia{
+        width: 350px;
+        height: 200px;
+    }
+    #serie-nao-encontrada{
+        display: none;
+        color: white;
+        font-size: x-large;
+    }
+ }
+
 

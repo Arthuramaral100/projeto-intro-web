@@ -1,112 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Séries</title>
-    <script src="index.js"></script>
+    <title>Artflix</title>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-    <header>
-        <h1>Séries</h1>
-    </header>
-    <main>
-        <section class="botao">
-            <label for="serie"></label>
-            <input type="text" name="serie" id="busca-serie" placeholder="Buscar..." >
-            <button type="submit" id="botao"><img src="./imagens/314807_search_icon.svg" alt=""></button>
-        </section>
-        <section class="catalogo">
-            <section class="serie" id="serie1">
-                <img src="./imagens/The-Office.jpg" alt="Banner The-Office" width="350px" height="200">
-                <iframe width="350" height="200" src="https://www.youtube.com/embed/tNcDHWpselE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <ul>
-                    <br>
-                    <li> <h2><a class="color-link" href="https://play.hbomax.com/series/urn:hbo:series:GYRsKbA3gmIjDwgEAAAMH?source=googleHBOMAX&action=open" target="_blank">The Office</a></h2></li>
-                    <br>
-                    <li>
-                        Esta versão americana de "The Office" é uma comédia que gira em torno do cotidiano de um escritório. Esta sátira descreve a vida dos funcionários da fábrica de papel Dunder Miffin, situada em Scranton, na Pensilvânia.
-                    </li>
-                    <li>Temporadas: 9</li>
-                    <li>Episódios: 201</li>
-                    <li>Disponível na Netflix: Não</li>
-                    <li>
-                        Elenco: Steve Carrell, Rainn Wilson, John Krasinski, Jenna Fischer, B. J. Novak, Angela Kinsey, Brian Baumgartner, Oscar Nunez, Leslie David Baker, Creed Bratton, Phyllis Smith, MIndy Kaling, Kate Flannery, Paul Lieberstein, Craig Robinson, Ed Helms, Ellie Kemper.
-                    </li>
-                    <br>
-                    <br>
-                </ul>
+        <header>
+            <h1 class="nome-pagina">A R T F L I X</h1>
+            <div class="pesquisa-perfil">
+                <section class="barra-de-pesquisa">
+                    <label for="serie"></label>
+                    <input type="text" name="serie" id="input" placeholder="Buscar . . .">
+                    <button type="submit" id="botao" onclick="encontraSerie(event)"><img
+                            src="./imagens/314807_search_icon.svg" alt=""></button>
+                </section>
+                <img class="foto-perfil"
+                    src="./imagens/AAAABeFu3Ug7V7UwxocXalzwqWxFUb1ltzjfUpMfQMySx8lcTYg0s2bI53NCdoGCwaBqhvvO0PGiY8sZmOFEmIBSAmXsCaFcvOGPNOwT.png"
+                    width="60px" height="60px" alt="foto perfil">
+            </div>
+        </header>
+        <main>
+            <nav>
+                <div class="sites" id="netflix">NETFLIX</div>
+                <div class="sites" id="amazon">Amazon Prime Video</div>
+                <div class="sites" id="hbo">HBOMax</div>
+                <div class="sites" id="disney">DISNEY+</div>
+                <div class="sites" id="globo">Globoplay</div>
+                <div class="sites" id="apple">Apple TV+</div>
+            </nav>
+                <h1 id="serie-nao-encontrada">: / SÉRIE NÃO ENCONTRADA</h1>
+            <section class="catalogo" id="catalogo">
+                <section class="serie" id="serie-1">
+                    <img src="./imagens/The-Office-Star-Plus.jpg" alt="Banner The-Office" width="460px" height="250" class="midia">
+                    <iframe width="460" height="250" src="https://www.youtube.com/embed/tNcDHWpselE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen  class="midia"></iframe>
+                    <ul id="serie1">
+                        <br>
+                        <li class="nome-serie1">
+                            <h2><a class="color-link"
+                                    href="https://play.hbomax.com/series/urn:hbo:series:GYRsKbA3gmIjDwgEAAAMH?source=googleHBOMAX&action=open"
+                                    target="_blank">The Office</a></h2>
+                        </li>
+                    </ul>
+                </section>
+                <section class="serie" id="serie-2">
+                    <img  class="midia" src="./imagens/Brooklyn_Nine_Nine.jpg" alt="Banner brooklyn99" width="460px" height="250px">
+                    <iframe  class="midia" width="460" height="250" src="https://www.youtube.com/embed/icTOP9F17pU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <ul id="serie2">
+                        <br>
+                        <li class="nome-serie2">
+                            <h2><a class="color-link" href="https://www.netflix.com/br/title/70281562"
+                                    target="_blank">BROOKLYN 99</a></h2>
+                        </li>
+                    </ul>
+                </section>
+                <section class="serie" id="serie-3">
+                    <img  class="midia" src="./imagens/netflix-the-crown.webp" alt="bannner The Crown" width="460px" height="250px">
+                    <iframe  class="midia" width="460" height="250" src="https://www.youtube.com/embed/dFZC-_T_irA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="video-the-Crown"></iframe>
+                    <ul id="serie3">
+                        <br>
+                        <li class="nome-serie3">
+                            <h2><a class="color-link" href="https://www.netflix.com/br/title/80025678"
+                                    target="_blank">THE CROWN</a></h2>
+                        </li>
+                    </ul>
+                </section>
+                <section class="serie" id="serie-4">
+                    <img  class="midia" src="./imagens/strangerthings.jpg" alt="bannner Stranger Things" width="460px" height="250px">
+                    <iframe  class="midia" width="460" height="250" src="https://www.youtube.com/embed/fLL0_Vy2Wlo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <ul id="serie4">
+                        <br>
+                        <li class="nome-serie4">
+                            <h2><a class="color-link" href="https://www.netflix.com/br/title/80057281"
+                                    target="_blank">STRANGER THINGS</a></h2>
+                        </li>
+                    </ul>
+                </section>
+                <section class="serie" id="serie-5">
+                    <img  class="midia" src="./imagens/community.jpeg" alt="bannner community" width="460px" height="250px">
+                    <iframe  class="midia" width="460" height="250" src="https://www.youtube.com/embed/C4W4L9TLJa8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <ul id="serie5">
+                        <br>
+                        <li class="nome-serie1">
+                            <h2><a class="color-link" href="https://www.netflix.com/title/70155589"
+                                    target="_blank">COMMUNITY</a></h2>
+                        </li>
+                    </ul>
+                </section>
+                <section class="serie" id="serie-6">
+                    <img  class="midia" src="./imagens/sherlock-img.jpeg" alt="bannner Sherlock" width="460px" height="250px">
+                    <iframe  class="midia" width="460" height="250" src="https://www.youtube.com/embed/Eq3pF5OhlJk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <ul id="serie6">
+                        <br>
+                        <li class="nome-serie1">
+                            <h2><a class="color-link" href="https://www.primevideo.com/detail/0Q18NAAMP9UE0PPFAHTTUE2XOL/ref=atv_dp_season_select_s1"
+                                    target="_blank">SHERLOCK</a></h2>
+                        </li>
+                    </ul>
+                </section>
             </section>
-            <section class="serie" id="serie2">
-                <img src="./imagens/brooklyn99.jpg" alt="Banner brooklyn99" width="350px" height="200px">
-                <iframe width="350" height="200" src="https://www.youtube.com/embed/icTOP9F17pU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <ul>
-                    <br>
-                    <li> <h2><a class="color-link" href="https://www.netflix.com/br/title/70281562" target="_blank">Brooklyn 99</a></h2></li>
-                    <br>
-                    <li>
-                        A série gira em torno de Jake Peralta (Andy Samberg), um imaturo, mas talentoso, detetive da polícia de Nova York na fictícia 99. ª Delegacia do Brooklyn, que muitas vezes entra em conflito com seu novo comandante, o sério e severo capitão Raymond Holt (Andre Braugher).
-                    </li>
-                    <li>Temporadas: 8</li>
-                    <li>Episódios: 153</li>
-                    <li>Disponível na Netflix: Sim</li>
-                    <li>
-                        Elenco: Andy Samberg, Melissa Fumero, Stephanie Beatriz, Chelsea Peretti, Terry Crews, Andre Braugher, Joe Lo Truglio, Dirk Blocker, Joel McKinnon Miller, Marc Evan Jackson, Jason Mantzoukas, Craig Robinson.
-                    </li>
-                    <br>
-                    <br>
-                </ul>
             </section>
-            <section class="serie" id="serie3">
-                <img src="./imagens/the-Crown.jpg" alt="bannner The Crown" width="350px" height="200px">
-                <iframe width="350" height="200" src="https://www.youtube.com/embed/dFZC-_T_irA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-the-Crown"></iframe>
-                <ul>
-                    <br>
-                    <li> <h2><a class="color-link" href="https://www.netflix.com/br/title/80025678" target="_blank">The Crown</a></h2></li>
-                    <br>
-                    <li>
-                        The Crown é uma série de TV britânica produzida para a Netflix. A história acompanha a rainha Elizabeth II e os primeiros-ministros que, juntos, deram forma à Grã-Bretanha depois da Segunda Guerra Mundial.
-                    </li>
-                    <li>Temporadas: 4</li>
-                    <li>Episódios: 40</li>
-                    <li>Disponível na Netflix: Sim</li>
-                    <li>
-                        Elenco: Claire Foy, Olivia Colman, Matt Smith, Tobias Menzies, Vanessa Kirby, Helena Bonham Carter, Eilen Atkins, Victoria Hamilton, Pip Torrens, John Lithgow, Ben Miles.
-                    </li>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </ul>
-            </section>
-            <section class="serie" id="serie4">
-                <img src="./imagens/stranger-things.jpg" alt="bannner Stranger Things" width="350px" height="200px">
-                <iframe width="350" height="200" src="https://www.youtube.com/embed/fLL0_Vy2Wlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <ul>
-                    <br>
-                    <li> <h2><a class="color-link" href="https://www.netflix.com/br/title/80057281" target="_blank">Stranger Things</a></h2></li>
-                    <br>
-                    <li>
-                        Um grupo de amigos se envolve em uma série de eventos sobrenaturais na pacata cidade de Hawkins. Eles enfrentam criaturas monstruosas, agências secretas do governo e se aventuram em dimensões paralelas.
-                    </li>
-                    <li>Temporadas: 4</li>
-                    <li>Episódios: 34</li>
-                    <li>Disponível na Netflix: Sim</li>
-                    <li>
-                        Elenco: Millie Bobby Brown, Finn Wolfhard, Noah Schnapp, Caleb McLaughlin, Sadie Sink, Gaten Matarazzo, Joe Keery, David Harbour, Natalia Dyer, Winona Ryder, Charlie Heaton, Maya Hawke, Matthew Modine, Joseph Quinn, Jamie Campbell Bower, Priah Ferguson, Brett Gelman, Paul Reiser, Cara Buono, Eduardo Franco, Gabriella Pizzolo.
-                    </li>
-                </ul>
-            </section>
-            </section>
-        </section>
-    </main>
-    <footer>
-        <a href="https://www.instagram.com/arthur_amarallima/" target="_blank"><img src="./imagens/icons8-instagram.svg" alt="icone instagram" class="icone">
-        <a href="https://github.com/Arthuramaral100" target="_blank"><img src="./imagens/icons8-github.svg" alt="icone github" class="icone">    
-    </footer>
+        </main>
+        <footer>
+            <div class="redes">
+                <a href="https://www.instagram.com/arthur_amarallima/" target="_blank"><img src="./imagens/icons8-instagram.svg" alt="icone instagram" class="icone"></a>
+                <a href="https://github.com/Arthuramaral100" target="_blank"><img src="./imagens/icons8-github.svg"alt="icone github" class="icone"></a>
+                <a href="https://www.linkedin.com/in/arthur-amaral-8b7672209/" target="_blank"><img src="./imagens/icons8-linkedin.svg" alt="icone linkedin" class="icone"></a>
+            </div>
+            <h4 id="nome">Arthur Amaral Lima</h4>
+        </footer>
     </div>
 </body>
+
 </html>
