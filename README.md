@@ -17,4 +17,4 @@ Esse é o projeto de introdução aos fundamentos do desenvolvimento Web. pratic
 
 ## Informações
 
-O guia de séries Artflix te mostra minhas séries favoritas. As séries são organizadas em cards com informações sobre cada uma, contêm um banner e um trailer da série. Contêm um sistema de pesquisas, manipulando o DOM para retornar ao usário o resultado da pesquisa. e ao final da página, ícones clicaveis que direcionam para minhas redes(Instagram, Linkedin e GitHub) 
+O guia de séries Artflix te mostra minhas séries favoritas. As séries são organizadas em cards com informações sobre cada uma, contêm um banner e um trailer da série. Contêm um sistema de pesquisas, manipulando o DOM para retornar ao usário o resultado da pesquisa. E ao final da página, ícones clicaveis que direcionam para minhas redes(Instagram, Linkedin e GitHub) 
